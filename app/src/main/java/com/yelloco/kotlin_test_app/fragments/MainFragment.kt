@@ -39,6 +39,14 @@ class MainFragment : Fragment()
             Log.i(classTag, "View is: ${it.id}")
             GuiManager.setSubFragment(SubmitFoodFragment())
         }
+
+        binding.fragmentMainAvailableFoodButton.setOnClickListener {
+
+        }
+
+        binding.fragmentMainOnlinePostsButton.setOnClickListener {
+            GuiManager.setSubFragment(OnlinePostsFragment())
+        }
     }
 
     override fun onDestroyView()

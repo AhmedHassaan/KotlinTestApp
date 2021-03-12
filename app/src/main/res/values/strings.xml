@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">KotlinTestApp</string>
+    <string name="food_logo" translatable="false">food_logo</string>
+    <string name="available_food">Available Food</string>
+    <string name="add_food">Add Food</string>
+    <string name="food_app">Food App</string>
+    <string name="food_name">Food Name</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="online_posts">Online Posts</string>
+    <string name="please_wait">Please Wait</string>
 </resources>

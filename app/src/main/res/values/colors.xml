@@ -10,4 +10,5 @@
     <color name="red">#FF0000</color>
     <color name="indigo_dark">#b6b8c3</color>
     <color name="indigo_light">#e8eaf6</color>
+    <color name="blue">#0000ff</color>
 </resources>
