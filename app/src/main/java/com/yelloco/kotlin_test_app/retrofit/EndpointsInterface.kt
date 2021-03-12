@@ -8,8 +8,8 @@ import retrofit2.http.GET
 interface EndpointsInterface {
 
     @GET("posts")
-    fun getAllPost(): Call<List<PostModel>>
+    fun getAllPost(): Call<MutableList<PostModel>>
 
     @GET("users")
-    fun getAllUsers(): Call<List<UserModel>>
+    fun getAllUsers(): Call<MutableList<UserModel>>
 }

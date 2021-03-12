@@ -4,21 +4,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.yelloco.kotlin_test_app.R
+import com.yelloco.kotlin_test_app.diff_callbacks.PostsDiffCallback
 import com.yelloco.kotlin_test_app.retrofit.models.PostModel
 import com.yelloco.kotlin_test_app.retrofit.models.UserModel
 
 
-class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
+class PostsAdapter : ListAdapter<PostModel, PostsAdapter.PostViewHolder>(PostsDiffCallback()) {
 
-    var postModels: List<PostModel> = ArrayList()
+    var postModels: MutableList<PostModel> = ArrayList()
         set(value) {
             field = value
             notifyDataSetChanged()
         }
 
-    var userModels: List<UserModel> = ArrayList()
+    var userModels: MutableList<UserModel> = ArrayList()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -31,9 +33,11 @@ class PostsAdapter : RecyclerView.Adapter<PostsAdapter.PostViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        holder.bodyTextView.text = postModels.get(position).body
-        holder.titleTextView.text = postModels.get(position).title
-        holder.userTextView.text = getUserName(postModels.get(position).userId)
+        postModels.get(position).let {
+            holder.bodyTextView.text = it.body
+            holder.titleTextView.text = it.title
+            holder.userTextView.text = getUserName(it.userId)
+        }
     }
 
     override fun getItemCount(): Int {

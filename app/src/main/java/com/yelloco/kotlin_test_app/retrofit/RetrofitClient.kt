@@ -17,16 +17,16 @@ object RetrofitClient {
             .build()
     }
 
-    val API: EndpointsInterface by lazy {
+    private val API: EndpointsInterface by lazy {
         retrofit.create(EndpointsInterface::class.java)
     }
 
-    fun getAllPosts() : Call<List<PostModel>>
+    fun getAllPosts() : Call<MutableList<PostModel>>
     {
         return API.getAllPost()
     }
 
-    fun getAllUsers() : Call<List<UserModel>>
+    fun getAllUsers() : Call<MutableList<UserModel>>
     {
         return API.getAllUsers()
     }
