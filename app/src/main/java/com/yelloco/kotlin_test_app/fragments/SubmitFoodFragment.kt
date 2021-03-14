@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.yelloco.kotlin_test_app.app_utils.AppUtils
 import com.yelloco.kotlin_test_app.app_utils.AppUtils.Companion.hideKeyboard
 import com.yelloco.kotlin_test_app.app_utils.GuiManager
 import com.yelloco.kotlin_test_app.database.FoodDatabase
