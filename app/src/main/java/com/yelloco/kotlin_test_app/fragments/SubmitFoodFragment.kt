@@ -73,11 +73,20 @@ class SubmitFoodFragment : Fragment() {
     private fun addToFoodDB(food: Food) {
         Thread()
         {
-            FoodDatabase.get(activity).foodDao()
-                .insertFood(food)
+            val foodDB = FoodDatabase.get(activity).foodDao()
+            if(foodDB.isFoodExist(food.name))
+            {
+                activity.runOnUiThread {
+                    progressDialog.dismiss()
+                    Toast.makeText(activity, "${food.name} is already exist", Toast.LENGTH_LONG).show()
+                }
+                return@Thread
+            }
+
+            foodDB.insertFood(food)
             activity.runOnUiThread {
                 progressDialog.dismiss()
-                Toast.makeText(activity, "Food added", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "${food.name} added", Toast.LENGTH_LONG).show()
             }
         }.start()
     }

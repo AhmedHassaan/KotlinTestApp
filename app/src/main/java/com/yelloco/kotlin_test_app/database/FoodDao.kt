@@ -14,4 +14,7 @@ interface FoodDao {
 
     @Query("SELECT * FROM Food")
     fun getAll() : List<Food>
+
+    @Query("SELECT EXISTS(SELECT * FROM Food WHERE name = :name)")
+    fun isFoodExist(name : String) : Boolean
 }
