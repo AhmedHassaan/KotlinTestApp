@@ -1,9 +1,6 @@
 package com.yelloco.kotlin_test_app.database
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.yelloco.kotlin_test_app.database.models.Food
 
 @Dao
@@ -17,4 +14,7 @@ interface FoodDao {
 
     @Query("SELECT EXISTS(SELECT * FROM Food WHERE name = :name)")
     fun isFoodExist(name : String) : Boolean
+
+    @Delete
+    fun deleteFood(food: Food)
 }

@@ -29,7 +29,7 @@ class OnlinePostsFragment : Fragment() {
 
     private lateinit var activity: Activity
     private lateinit var customProgressDialog: CustomProgressDialog
-    private lateinit var postsAdapter: PostsAdapter
+    private var postsAdapter: PostsAdapter = PostsAdapter()
     private var fetchingPostsFinished: Boolean = false
     private var fetchingUsersFinished: Boolean = false
 
@@ -58,7 +58,6 @@ class OnlinePostsFragment : Fragment() {
     private fun initRecyclerView()
     {
         binding.fragmentOnlinePostsRecyclerView.layoutManager = LinearLayoutManager(activity)
-        postsAdapter = PostsAdapter()
         binding.fragmentOnlinePostsRecyclerView.adapter = postsAdapter
 
         ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(

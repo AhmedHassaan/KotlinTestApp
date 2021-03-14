@@ -61,7 +61,7 @@ class SubmitFoodFragment : Fragment() {
             Log.i(_classTag, "Text entered is: ${binding.fragmentSubmitFoodFoodInputEditText.text}")
             if(binding.fragmentSubmitFoodFoodInputEditText.text.toString().trim().isEmpty())
             {
-                Toast.makeText(activity, "Can't insert empty food name", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Can't insert empty food name", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
@@ -78,7 +78,7 @@ class SubmitFoodFragment : Fragment() {
             {
                 activity.runOnUiThread {
                     progressDialog.dismiss()
-                    Toast.makeText(activity, "${food.name} is already exist", Toast.LENGTH_LONG).show()
+                    Toast.makeText(activity, "${food.name} is already exist", Toast.LENGTH_SHORT).show()
                 }
                 return@Thread
             }
@@ -86,7 +86,7 @@ class SubmitFoodFragment : Fragment() {
             foodDB.insertFood(food)
             activity.runOnUiThread {
                 progressDialog.dismiss()
-                Toast.makeText(activity, "${food.name} added", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "${food.name} added", Toast.LENGTH_SHORT).show()
             }
         }.start()
     }

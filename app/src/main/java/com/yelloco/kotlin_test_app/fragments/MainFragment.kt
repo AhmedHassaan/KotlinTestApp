@@ -41,7 +41,7 @@ class MainFragment : Fragment()
         }
 
         binding.fragmentMainAvailableFoodButton.setOnClickListener {
-
+            GuiManager.setSubFragment(FoodListFragment())
         }
 
         binding.fragmentMainOnlinePostsButton.setOnClickListener {

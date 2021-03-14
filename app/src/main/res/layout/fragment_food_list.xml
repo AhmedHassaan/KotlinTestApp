@@ -6,20 +6,20 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragment_online_posts_recycler_view"
+        android:id="@+id/fragment_food_list_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@id/fragment_online_posts_cancel_button"
+        app:layout_constraintBottom_toTopOf="@id/fragment_food_list_cancel_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/list_item_posts" />
+        tools:listitem="@layout/list_item_food" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/fragment_online_posts_cancel_button"
+        android:id="@+id/fragment_food_list_cancel_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"

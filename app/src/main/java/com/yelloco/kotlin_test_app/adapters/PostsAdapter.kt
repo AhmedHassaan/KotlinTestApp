@@ -33,7 +33,7 @@ class PostsAdapter : ListAdapter<PostModel, PostsAdapter.PostViewHolder>(PostsDi
     }
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        postModels.get(position).let {
+        postModels[position].let {
             holder.bodyTextView.text = it.body
             holder.titleTextView.text = it.title
             holder.userTextView.text = getUserName(it.userId)
