@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.yelloco.kotlin_test_app.R
-import com.yelloco.kotlin_test_app.diff_callbacks.PostsDiffCallback
+import com.yelloco.kotlin_test_app.callbacks.diifs.PostsDiffCallback
 import com.yelloco.kotlin_test_app.retrofit.models.PostModel
 import com.yelloco.kotlin_test_app.retrofit.models.UserModel
 

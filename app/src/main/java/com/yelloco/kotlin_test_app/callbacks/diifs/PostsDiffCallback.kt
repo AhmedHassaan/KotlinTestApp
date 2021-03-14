@@ -1,4 +1,4 @@
-package com.yelloco.kotlin_test_app.diff_callbacks
+package com.yelloco.kotlin_test_app.callbacks.diifs
 
 import androidx.recyclerview.widget.DiffUtil
 import com.yelloco.kotlin_test_app.retrofit.models.PostModel

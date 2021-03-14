@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.yelloco.kotlin_test_app.app_utils.GuiManager
+import com.yelloco.kotlin_test_app.database.FoodDatabase
 import com.yelloco.kotlin_test_app.databinding.ActivityMainBinding
 import com.yelloco.kotlin_test_app.fragments.MainFragment
 
